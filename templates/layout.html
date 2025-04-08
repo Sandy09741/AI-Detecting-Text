@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Sxl28k6lI5pBO+XSO4FO6Kgyl8ZYUQJ8+3KU39ej6X7B7EYJ1N6uHj8/5QGJm2l6I+z4DpH/0MLINJzm6i6r2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> AI Text Detector</h1>
+            <p>Detect AI-generated text with ease and accuracy.</p>
+            <a href="{{ url_for('check') }}" class="btn">Get Started</a>
+        </div>
+    </header>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2024 AI Text Detector. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

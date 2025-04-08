@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="content">
+    <h2>Result</h2>
+    <div class="result-label">AI-Generated: {{ result.label }}</div>
+    <div class="result-probabilities">
+        <div>Human-Written Probability: {{ result.probabilities['Human-Written']|round(2) }}%</div>
+        <div>AI-Generated Probability: {{ result.probabilities['AI-Generated']|round(2) }}%</div>
+    </div>
+    <a href="{{ url_for('check') }}" class="btn">Check Another Text</a>
+</div>
+{% endblock %}
